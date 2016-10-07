@@ -166,6 +166,10 @@ www.typeandgrids.com
 		
 		</div><!-- col1 -->
 		
+		<!-- Even numbered projects are dynamically moved into this second column via JS -->
+		<div class="eight columns" id="col2">
+		</div>
+	
 		<div id="my own" class="sixteen columns">
 			
 			<p> TABLEAU </p>
@@ -194,14 +198,11 @@ www.typeandgrids.com
 				var divElement = document.getElementById('viz1475816810789');
 				var vizElement = divElement.getElementsByTagName('object')[0];
 				vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';               
-				var scriptElement = document.createElement('script');                    
+				var scriptElement = document.createElement('script');
+		
 				scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
 				vizElement.parentNode.insertBefore(scriptElement, vizElement);
 			</script>
-		</div>
-		
-		<!-- Even numbered projects are dynamically moved into this second column via JS -->
-		<div class="eight columns" id="col2">
 		</div>
 	
 	</div>
