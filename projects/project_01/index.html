@@ -72,55 +72,42 @@ www.typeandgrids.com
 		<hr />
 	</header>
 	<!-- Header ends ============================================================================ -->
-	
-	<div id="project body" class="sixteen columns" >
-		
-		<div id="my own">
+    
+    <div id="my own" class="sixteen columns" >
 			
-			<p>CMS has opened up a large amount of data for public access and analysis. Below is a portal to the 2014 Medicare Utilization dataset that includes a 5% sample of all Medicare provider claims on record. For this project, we look at prostate cancer screening instances (Biopsies/PSA/DREs) to get an understanding of the frequency at which men are screened in various regions of the United States. The next step is to identify which states </p>
+        <p>CMS has opened up a large amount of data for public access and analysis. Below is a portal to the 2014 Medicare Utilization dataset that includes a 5% sample of all Medicare provider claims on record. For this project, we look at prostate cancer screening instances (Biopsies/PSA/DREs) to get an understanding of the frequency at which men are screened in various regions of the United States. The next step is to identify which states are the best suited to create pathology labs that require minimal shipping of samples. The following problem sets explore different optimiation problems considering the case of setting up one more multiple pathology labs either sequentially or simultaneously and the total amount of shipping involved in each arrangement.</p>
 
-			<div>
-				<iframe width="950px" title="Medicare Provider Utilization and Payment Data: Physician and Other Supplier PUF CY2014" height="808px" src="https://data.cms.gov/w/ee7f-sh97/vmsd-2w5m?cur=4K6GzAcMCxf&from=nwiTTEYxVdj" frameborder="0"scrolling="no">
-					<a href="https://data.cms.gov/Public-Use-Files/Medicare-Provider-Utilization-and-Payment-Data-Phy/ee7f-sh97" title="Medicare Provider Utilization and Payment Data: Physician and Other Supplier PUF CY2014" target="_blank">Medicare Provider Utilization and Payment Data: Physician and Other Supplier PUF CY2014</a>
-				</iframe>
-			</div>
-
-			<p>Below is state information for the number of prostate biopsies and PSA procedures that are performed each year. Each one of these instances constitutes a case in which a sample needs to be shipped from a clinic to a reference lab for analysis. The problem here setting up a lab in the state that would involve minimal shipping costs if every other state were to ship it's sample to that specific lab. Below are two Tableau tables that provide an overview of the problem at hand:</p>
-
-			<div class='tableauPlaceholder' id='viz1475961900348' style='position: relative'>
-				<noscript>
-					<a href='#'>
-						<img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bi&#47;BiopsyPSAbyState&#47;StateComparison&#47;1_rss.png' style='border: none' />
-					</a>
-				</noscript>
-				<object class='tableauViz'  style='display:none;'>
-					<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-					<param name='site_root' value='' />
-					<param name='name' value='BiopsyPSAbyState&#47;StateComparison' />
-					<param name='tabs' value='yes' />
-					<param name='toolbar' value='yes' />
-					<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bi&#47;BiopsyPSAbyState&#47;StateComparison&#47;1.png' />
-					<param name='animate_transition' value='yes' />
-					<param name='display_static_image' value='yes' />
-					<param name='display_spinner' value='yes' />
-					<param name='display_overlay' value='yes' />
-					<param name='display_count' value='yes' />
-				</object>
-			</div>
-			<script type='text/javascript'>
-			    var divElement = document.getElementById('viz1475961900348');
-			    var vizElement = divElement.getElementsByTagName('object')[0];
-			    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='524px';vizElement.style.maxWidth='100%';vizElement.style.minHeight='655px';vizElement.style.maxHeight=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';}
-			    var scriptElement = document.createElement('script');
-			    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-			    vizElement.parentNode.insertBefore(scriptElement, vizElement);
-			</script>
-
-			<p>Project 01, Step 01</p>
-			
-			<hr />
-		
-		</div>
+        <p>Each instance in which a man is biopsied or has his PSA measured constitutes a case in which a sample needs to be shipped from a clinic to a reference lab for analysis. The following Tableau table provide a vizualization of the frequency of each of these instances in each state:</p>
+            
+        <div class='tableauPlaceholder' id='viz1475994228599' style='position: relative'>
+            <noscript>
+                <a href='#'>
+                    <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;XB&#47;XBDFY9S24&#47;1_rss.png' style='border: none' />
+                </a>
+            </noscript>
+            <object class='tableauViz'  style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='path' value='shared&#47;XBDFY9S24' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;XB&#47;XBDFY9S24&#47;1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+            </object>
+        </div>
+    
+        <script type='text/javascript'>
+            var divElement = document.getElementById('viz1475994228599');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+        
+        <p>Project 01, Step 01</p>
 		
 		<hr />
 		
