@@ -75,7 +75,8 @@ www.typeandgrids.com
     
     <div id="my own" class="sixteen columns" >
 			
-        <p>CMS has opened up a large amount of data for public access and analysis. Below is a portal to the 2014 Medicare Utilization dataset that includes a 5% sample of all Medicare provider claims on record. For this project, we look at prostate cancer screening instances (Biopsies/PSA/DREs) to get an understanding of the frequency at which men are screened in various regions of the United States. The next step is to identify which states are the best suited to create pathology labs that require minimal shipping of samples. The following problem sets explore different optimiation problems considering the case of setting up one more multiple pathology labs either sequentially or simultaneously and the total amount of shipping involved in each arrangement.</p>
+        <p>CMS has opened up a large amount of data for public access and analysis. Below is a portal to the 2014 Medicare Utilization dataset that includes a 5% sample of all Medicare provider claims on record. For this project, we look at prostate cancer screening instances (Biopsies/PSA/DREs) to get an understanding of the frequency at which men are screened in various regions of the United States. In this case, we are interested in setting up a central pathology lab that each state can ship their samples to for analysis. The key is selecting the state that will minimize the total distance each sample must travel.</p>
+        
 
         <p>Each instance in which a man is biopsied or has his PSA measured constitutes a case in which a sample needs to be shipped from a clinic to a reference lab for analysis. The following Tableau table provide a vizualization of the frequency of each of these instances in each state:</p>
             
@@ -108,7 +109,48 @@ www.typeandgrids.com
         </script>
         
         <p>Project 01, Step 01</p>
+        
+        <p>The next step is to write code that explores the total distance each sample must travel if it were to be shipped to a specific state. The data set used to perform this analysis is structured as follows:</p>
+        
+AL,32.75,-86.75,2417.00
+AR,34.75,-92.50,1553.00
+AZ,34.50,-111.50,4732.00
+CA,37.25,-119.75,11605.00
+CO,39.00,-105.50,2491.00
 		
+        <table>
+            <tr>
+                <th>State</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Number of Services</th>
+            </tr>
+            <tr>
+                <th>AL</th>
+                <th>AR</th>
+                <th>AZ</th>
+                <th>...</th>
+            </tr>
+            <tr>
+                <th>32.75</th>
+                <th>34.75</th>
+                <th>34.50</th>
+                <th>...</th>
+            </tr>
+            <tr>
+                <th>-86.75</th>
+                <th>-92.50</th>
+                <th>-111.50</th>
+                <th>...</th>
+            </tr>
+            <tr>
+                <th>2417.00</th>
+                <th>1553.00</th>
+                <th>4732.00</th>
+                <th>...</th>
+            </tr>
+        </table>
+        
 		<hr />
 		
 		<div id="detailViewBack">
