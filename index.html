@@ -7,42 +7,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
 </head>
-
-<style>
-
-body {
-  background: #fcfcfa;
-}
-
-.stroke {
-  fill: none;
-  stroke: #000;
-  stroke-width: 3px;
-}
-
-.fill {
-  fill: #fff;
-}
-
-.graticule {
-  fill: none;
-  stroke: #777;
-  stroke-width: .5px;
-  stroke-opacity: .5;
-}
-
-.land {
-  fill: #222;
-}
-
-.boundary {
-  fill: none;
-  stroke: #fff;
-  stroke-width: .5px;
-}
-
-</style>
 
 <body>
 
@@ -51,92 +17,24 @@ body {
   <p>Data Analytics Portfolio</p>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-2">
-      <p>
-        test text
-      </p>
-    </div>
-    <div class="col-lg-8">
+<div id="viz"></div>
+    <script type="text/javascript">
 
-<script src="//d3js.org/d3.v3.min.js"></script>
-<script src="//d3js.org/d3.geo.projection.v0.min.js"></script>
-<script src="//d3js.org/topojson.v1.min.js"></script>
+    var sampleSVG = d3.select("#viz")
+        .append("svg")
+        .attr("width", 100)
+        .attr("height", 100);
 
-<script>
+    sampleSVG.append("circle")
+        .style("stroke", "gray")
+        .style("fill", "white")
+        .attr("r", 40)
+        .attr("cx", 50)
+        .attr("cy", 50)
+        .on("mouseover", function(){d3.select(this).style("fill", "aliceblue");})
+        .on("mouseout", function(){d3.select(this).style("fill", "white");});
 
-var width = 960,
-    height = 560;
-
-var projection = d3.geo.armadillo()
-    .scale(237)
-    .translate([width / 2, height * .7])
-    .parallel(20)
-    .rotate([-10, 0])
-    .precision(.1);
-
-var path = d3.geo.path()
-    .projection(projection);
-
-var graticule = d3.geo.graticule();
-
-var svg = d3.select("body").append("svg")
-    .attr("width", width)
-    .attr("height", height);
-
-var defs = svg.append("defs");
-
-defs.append("path")
-    .datum({type: "Sphere"})
-    .attr("id", "sphere")
-    .attr("d", path);
-
-defs.append("clipPath")
-    .attr("id", "clip")
-  .append("use")
-    .attr("xlink:href", "#sphere");
-
-svg.append("use")
-    .attr("class", "stroke")
-    .attr("xlink:href", "#sphere");
-
-svg.append("use")
-    .attr("class", "fill")
-    .attr("xlink:href", "#sphere");
-
-svg.append("path")
-    .datum(graticule)
-    .attr("class", "graticule")
-    .attr("clip-path", "url(#clip)")
-    .attr("d", path);
-
-d3.json("/mbostock/raw/4090846/world-50m.json", function(error, world) {
-  if (error) throw error;
-
-  svg.insert("path", ".graticule")
-      .datum(topojson.feature(world, world.objects.land))
-      .attr("class", "land")
-      .attr("clip-path", "url(#clip)")
-      .attr("d", path);
-
-  svg.insert("path", ".graticule")
-      .datum(topojson.mesh(world, world.objects.countries, function(a, b) { return a !== b; }))
-      .attr("class", "boundary")
-      .attr("clip-path", "url(#clip)")
-      .attr("d", path);
-});
-
-d3.select(self.frameElement).style("height", height + "px");
-
-</script>
-
-    </div>
-    <div class="col-lg-2">
-      <p>test text</p>
-    </div>
-  </div>
-</div>
+    </script>
 
 </body>
 </html>
