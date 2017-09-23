@@ -1,8 +1,9 @@
-.container {
-    height:60%;
+/*
+
+html,body,.container {
+    height:100%;
 }
 
-/*
 .container {
     display:table;
     width: 100%;
