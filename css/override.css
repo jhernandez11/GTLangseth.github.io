@@ -1,25 +1,17 @@
-/*
-
-html,body,.container {
-    height:100%;
+.footer {
+  background: #061D25;
+  padding: 10px 0;
 }
-
-.container {
-    display:table;
-    width: 100%;
-    margin-top: -50px;
-    padding: 50px 0 0 0; set left/right padding according to needs
-    box-sizing: border-box;
+.footer a {
+  color: #70726F;
+  font-size: 20px;
+  padding: 10px;
+  border-right: 1px solid #70726F;
+  transition: all .5s ease;
 }
-
-.row {
-    height: 100%;
-    display: table-row;
+.footer a:first-child {
+  border-left: 1px solid #70726F;
 }
-
-.row .no-float {
-  display: table-cell;
-  float: none;
+.footer a:hover {
+  color: white;
 }
-
-*/
