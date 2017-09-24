@@ -1,17 +1,16 @@
 .footer {
-  background: #061D25;
+  background: #FFFFFF;
   padding: 10px 0;
+  text-align: center;
 }
 .footer a {
   color: #70726F;
   font-size: 20px;
-  padding: 10px;
-  border-right: 1px solid #70726F;
+  padding: 5px;
   transition: all .5s ease;
+  text-align: center;
 }
-.footer a:first-child {
-  border-left: 1px solid #70726F;
-}
+
 .footer a:hover {
-  color: white;
+  color: #e2e2e2;
 }
